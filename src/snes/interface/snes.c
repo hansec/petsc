@@ -1793,7 +1793,7 @@ PetscErrorCode SNESSetGS(SNES snes,PetscErrorCode (*SNESGSFunction)(SNES,Vec,Vec
 
 #undef __FUNCT__
 #define __FUNCT__ "SNESPicardComputeFunction"
-PetscErrorCode  SNESPicardComputeFunction(SNES snes,Vec x,Vec f,void *ctx)
+PETSC_EXTERN PetscErrorCode SNESPicardComputeFunction(SNES snes,Vec x,Vec f,void *ctx)
 {
   PetscErrorCode ierr;
   DM             dm;
@@ -1817,7 +1817,7 @@ PetscErrorCode  SNESPicardComputeFunction(SNES snes,Vec x,Vec f,void *ctx)
 
 #undef __FUNCT__
 #define __FUNCT__ "SNESPicardComputeJacobian"
-PetscErrorCode  SNESPicardComputeJacobian(SNES snes,Vec x1,Mat *J,Mat *B,MatStructure *flag,void *ctx)
+PETSC_EXTERN PetscErrorCode SNESPicardComputeJacobian(SNES snes,Vec x1,Mat *J,Mat *B,MatStructure *flag,void *ctx)
 {
   PetscFunctionBegin;
   /* the jacobian matrix should be pre-filled in SNESPicardComputeFunction */
